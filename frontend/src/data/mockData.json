@@ -1,0 +1,166 @@
+{
+    "Colleagues": [
+        {
+            "id": 1,
+            "name": "Aaron Linn",
+            "longDollar": true,
+            "history": [
+                {
+                    "hitoryId": 4,
+                    "date": "02/12/2024",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 3,
+                    "date": "01/31/2024",
+                    "longDollar": true
+                },
+                {
+                    "hitoryId": 2,
+                    "date": "01/22/2024",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 1,
+                    "date": "01/21/2024",
+                    "longDollar": true
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Paul Anderson",
+            "longDollar": true,
+            "history": [
+                {
+                    "hitoryId": 4,
+                    "date": "04/12/2024",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 3,
+                    "date": "04/31/2024",
+                    "longDollar": true
+                },
+                {
+                    "hitoryId": 2,
+                    "date": "02/22/2024",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 1,
+                    "date": "01/1/2024",
+                    "longDollar": true
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Mike Lang",
+            "longDollar": false,
+            "history": [
+                {
+                    "hitoryId": 4,
+                    "date": "04/12/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 3,
+                    "date": "04/31/2023",
+                    "longDollar": true
+                },
+                {
+                    "hitoryId": 2,
+                    "date": "02/22/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 1,
+                    "date": "01/1/2023",
+                    "longDollar": true
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Geoff Anderson",
+            "longDollar": true,
+            "history": [
+                {
+                    "hitoryId": 4,
+                    "date": "02/12/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 3,
+                    "date": "04/31/2023",
+                    "longDollar": true
+                },
+                {
+                    "hitoryId": 2,
+                    "date": "02/22/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 1,
+                    "date": "01/1/2022",
+                    "longDollar": true
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Aaron Ewoldt",
+            "longDollar": true,
+            "history": [
+                {
+                    "hitoryId": 4,
+                    "date": "02/12/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 3,
+                    "date": "04/31/2023",
+                    "longDollar": true
+                },
+                {
+                    "hitoryId": 2,
+                    "date": "02/22/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 1,
+                    "date": "01/1/2022",
+                    "longDollar": true
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Ben Dorothy",
+            "longDollar": true,
+            "history": [
+                {
+                    "hitoryId": 4,
+                    "date": "02/12/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 3,
+                    "date": "04/31/2023",
+                    "longDollar": true
+                },
+                {
+                    "hitoryId": 2,
+                    "date": "02/22/2023",
+                    "longDollar": false
+                },
+                {
+                    "hitoryId": 1,
+                    "date": "01/1/2022",
+                    "longDollar": true
+                }
+            ]
+        }
+    ]
+}
