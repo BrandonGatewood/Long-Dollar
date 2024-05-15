@@ -8,15 +8,31 @@ const InfoColleagueButton = ({colleague}) => {
     const [isActive, setIsActive] = useState(false);
     const handleIsActive = () => {
         setIsActive(!isActive);
-        if(!edit) {
-            handleEdit();
+
+        if(isActive === false) {
+            setIsDelete(false);
+            setRename(false);
+            setOption(false);
         }
     }
 
-    const [edit, setEdit] = useState(false);
-    const handleEdit = () => {
-        setEdit(!edit);
+    const [option, setOption] = useState(false);
+    const handleOption = () => {
+        setOption(!option);
     }
+
+    const [rename, setRename] = useState(false);
+    const handleRename = () => {
+        handleOption();
+        setRename(!rename);
+    }
+
+    const [isDelete, setIsDelete] = useState(false);
+    const handleDelete = () => {
+        handleOption();
+        setIsDelete(!isDelete);
+    }
+
 
     return(
         <>
@@ -41,20 +57,20 @@ const InfoColleagueButton = ({colleague}) => {
                             </button>
                         </div>
                         {
-                            edit && 
-                            <div class="modalBody infoModalBody">
-                                <button type='button' className='editButton' onClick={handleEdit}>Rename colleague</button>
-                                <button type='button' className='deleteButton'>Delete colleague</button>
+                            !option && 
+                            <div className="modalBody infoModalBody">
+                                <button type='button' className='editButton' onClick={handleRename}>Rename colleague</button>
+                                <button type='button' className='deleteButton' onClick={handleDelete}>Delete colleague</button>
                             </div>
                         }
                         {
-                            !edit &&
+                            option && rename &&
                             <div>
-                                <div class="modalBody ">
+                                <div className="modalBody ">
                                     <div className="back">
-                                        <button type='button' className='button backButton' onClick={handleEdit}>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                                        <button type='button' className='button backButton' onClick={handleRename}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                                             </svg>
                                         </button>
                                     </div>
@@ -63,7 +79,7 @@ const InfoColleagueButton = ({colleague}) => {
                                             <p>Enter new name: </p>
                                         </div>
                                         <div className="renameInput">
-                                            <input type="text" placeholder='New name' value={colleague.name}/>
+                                            <input type="text" placeholder='New name' defaultValue={colleague.name}/>
                                         </div>
                                     </div>
                                 </div>
@@ -73,8 +89,28 @@ const InfoColleagueButton = ({colleague}) => {
                                     </button> 
                                 </div>
                             </div>
-
-
+                        }
+                        {
+                            option && isDelete &&
+                            <div>
+                                <div className="modalBody ">
+                                    <div className="back">
+                                        <button type='button' className='button backButton' onClick={handleDelete}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div className='remove'>
+                                        <p>Confirm to remove colleague</p>
+                                    </div>
+                                </div>
+                                <div className="modalFooter">
+                                    <button type='button' className='saveButton delete'>
+                                        Confirm 
+                                    </button> 
+                                </div>
+                            </div>
                         }
                     </div>
                 </div>
