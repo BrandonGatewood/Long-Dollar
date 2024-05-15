@@ -60,7 +60,7 @@ const InfoColleagueButton = ({colleague}) => {
                             !option && 
                             <div className="modalBody infoModalBody">
                                 <button type='button' className='editButton' onClick={handleRename}>Rename colleague</button>
-                                <button type='button' className='deleteButton' onClick={handleDelete}>Delete colleague</button>
+                                <button type='button' className='deleteButton' onClick={handleDelete}>Remove colleague</button>
                             </div>
                         }
                         {
