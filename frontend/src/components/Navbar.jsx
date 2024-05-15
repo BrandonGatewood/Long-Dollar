@@ -1,9 +1,12 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import Hamburger from '../assets/icons/hamburger.svg?react'
-import logo from '../assets/images/LongDollarLogo.jpg'
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import Hamburger from '../assets/icons/hamburger.svg?react';
+import CloseNav from '../assets/icons/closeNav.svg?react';
+import logo from '../assets/images/LongDollarLogo.jpg';
 
-import '../css/navbar.css'
+// Styles
+import '../css/navbar.css';
+import '../css/button.css';
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -22,8 +25,14 @@ const Navbar = () => {
                         </Link> 
                     </div>
                     <div className="menu-icon" onClick={handleShowNavbar}>
-                        <Hamburger />
+                        { !showNavbar && <Hamburger /> }
+                        { showNavbar && <CloseNav />}
                     </div>
+                    {
+                        showNavbar && <div className="navOverlay">
+                            <button type='button' className='overlayButton' onClick={handleShowNavbar}></button>
+                        </div>
+                    }
                     <div className={`nav-elements  ${showNavbar && 'active'}`}>
                         <ul>
                             <li>
@@ -34,6 +43,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
+
                 </div> 
             </nav> 
 

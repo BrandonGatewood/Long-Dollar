@@ -5,7 +5,7 @@ import Toolbar from '../components/Toolbar';
 const Home = () => {
     return (
         <>
-            <Toolbar />
+            <Toolbar option={true}/>
         </>
     )
 }

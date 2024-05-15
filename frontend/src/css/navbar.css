@@ -49,7 +49,7 @@ a {
 .nav-elements ul a {
   font-size: 16px;
   font-weight: 400;
-  color: #000;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -84,11 +84,11 @@ a {
   .nav-elements {
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 70px;
     background-color: var(--white);
     width: 0px;
     height: calc(100vh - 60px);
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
     overflow: hidden;
   }
 
@@ -104,5 +104,15 @@ a {
   .nav-elements ul li {
     margin-right: unset;
     margin-top: 22px;
+  }
+
+  .navOverlay {
+      position: absolute; /* Positioning and size */
+      top: 80px;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(128,128,128,0.5); /* color */
+      overflow: hidden;
   }
 }

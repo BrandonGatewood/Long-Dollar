@@ -1,9 +1,11 @@
+
+// Components
+import Toolbar from '../components/Toolbar';
+
 const History = () => {
     return (
         <>
-            <div className="history">
-                <h2>History</h2>
-            </div>
+            <Toolbar option={false}/>
         </>
     )
 }

@@ -1,0 +1,39 @@
+{
+    "Colleagues": [
+        {
+            "id": 0,
+            "name": "Aaron Linn",
+            "longDollar": true
+        },
+        {
+            "id": 1,
+            "name": "Finn Gatewood",
+            "longDollar": false 
+        },
+        {
+            "id": 2,
+            "name": "Paul Anderson",
+            "longDollar": true
+        },
+        {
+            "id": 3,
+            "name": "Mike Lang",
+            "longDollar": false
+        },
+        {
+            "id": 4,
+            "name": "Geoff Anderson",
+            "longDollar": true
+        },
+        {
+            "id": 5,
+            "name": "Aaron Ewoldt",
+            "longDollar": true
+        },
+        {
+            "id": 6,
+            "name": "Ben Dorothy",
+            "longDollar": true
+        }
+    ]
+}
