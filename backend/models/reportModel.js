@@ -7,11 +7,7 @@ const reportSchema = new Schema({
         type: Schema.Types.ObjectId, ref: 'colleagueSchema',
         require: true,
     },
-    name: {
-        type: String,
-        require: true
-    },
-    dollar: {
+    prevLongDollar: {
         type: Boolean,
         require: true
     } 

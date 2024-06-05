@@ -1,32 +1,27 @@
 const express = require('express');
-const Colleague = require('../models/colleagueModel');
+const { 
+    getColleagues,
+    getColleague,
+    createColleague,
+    deleteColleague,
+    updateColleague
+} = require('../controllers/colleagueController');
 
 const router = express.Router();
 
 // get all colleagues
-router.get('/', (req, res) => {});
+router.get('/', getColleagues);
 
 // get a single colleague
-router.get('/:id', (req, res) => {});
+router.get('/:id', getColleague);
 
-// post a new colleague
-router.post('/', async (req, res) => {
-    const { name, longDollar } = req.body;
-
-    try{
-        const colleague = await Colleague.create({ name, longDollar });
-
-        res.status(200).json(colleague);
-    }
-    catch(error) {
-        res.status(400).json({ error: error.message });
-    }
-});
+// create a new colleague
+router.post('/', createColleague);
 
 // delete a colleague
-router.delete('/:id', (req, res) => {})
+router.delete('/:id', deleteColleague);
 
 // update a report
-router.patch('/:id', (req, res) => {})
+router.patch('/:id', updateColleague);
 
 module.exports = router;
