@@ -1,0 +1,15 @@
+.topBarContainer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 5px 20px; 
+}
+
+.signOut {
+    fill: var(--primary);
+    padding: 5px 20px;
+}

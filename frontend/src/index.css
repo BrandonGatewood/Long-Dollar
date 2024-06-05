@@ -16,6 +16,11 @@ body {
   margin: 0 auto;
 }
 
+img {
+    width: 120px;
+    height: 60px;
+}
+
 /* Input styles */
 input[type=text] {
   width: 100%;

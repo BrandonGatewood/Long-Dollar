@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Hamburger from '../assets/icons/hamburger.svg?react';
-import CloseNav from '../assets/icons/closeNav.svg?react';
-import logo from '../assets/images/LongDollarLogo.jpg';
+import HomeIcon from '../assets/icons/homeIcon.svg?react';
+import ReportsIcon from '../assets/icons/reportsIcon.svg?react';
 
 // Styles
 import '../css/navbar.css';
@@ -18,33 +17,14 @@ const Navbar = () => {
     return(
         <>
             <nav className='navbar'>
-                <div className="container">
-                    <div className='logo'>
-                        <Link to="/">
-                        <img src={logo} alt="Long Dollar Logo" /> 
-                        </Link> 
-                    </div>
-                    <div className="menu-icon" onClick={handleShowNavbar}>
-                        { !showNavbar && <Hamburger /> }
-                        { showNavbar && <CloseNav />}
-                    </div>
-                    {
-                        showNavbar && <div className="navOverlay">
-                            <button type='button' className='overlayButton' onClick={handleShowNavbar}></button>
-                        </div>
-                    }
-                    <div className={`nav-elements  ${showNavbar && 'active'}`}>
-                        <ul>
-                            <li>
-                                <NavLink to="/">Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/History">History</NavLink>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div> 
+                <NavLink to='/' className="navbarLink">
+                        <HomeIcon />
+                        <p className='navbarTitle'>Home</p>
+                </NavLink>
+                <NavLink to='/Reports' className="navbarLink">
+                    <ReportsIcon />
+                    <p className='navbarTitle'>Reports</p>
+                </NavLink>
             </nav> 
 
         </>

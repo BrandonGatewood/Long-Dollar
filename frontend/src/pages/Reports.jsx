@@ -2,7 +2,7 @@
 // Components
 import Toolbar from '../components/Toolbar';
 
-const History = () => {
+const Reports = () => {
     return (
         <>
             <Toolbar option={false}/>
@@ -10,4 +10,4 @@ const History = () => {
     )
 }
 
-export default History;
+export default Reports;
