@@ -1,0 +1,114 @@
+/*
+    Generic Modal
+*/
+
+.modalOverlay {
+    position: fixed; /* Positioning and size */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5); /* color */
+    transition: opacity 0.2s ease;
+    z-index: 9;
+}
+
+.modalContent{
+    position: fixed;
+    bottom: 79px; 
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 5px 5px 0 0;
+    z-index: 9;
+}
+
+/* modal content animations*/
+.modalContent.slideUp {
+    animation: slideUp 0.2s ease-out forwards;
+}
+
+.modalContent.slideDown {
+    animation: slideDown 0.2s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    } 
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0%);
+        opacity: 1;
+    } 
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.modalHeader {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-border);
+}
+
+.modalBody {
+    padding: 30px;
+}
+
+.modalText {
+    text-align: center;
+}
+.modalFooter {
+    text-align: end;
+    padding: 20px 20px 30px 20px;
+}
+
+
+
+/*
+    Add Colleague Modal 
+*/
+.modalInput {
+    margin-bottom: 30px;
+}
+
+.row {
+    padding: 20px 0 30px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+
+/*
+    Claim Modal
+*/
+.modalDate {
+    padding-bottom: 30px;
+}
+
+
+/*
+    Info Colleague Modal
+*/
+.modalContentInfo {
+    bottom: 0px;
+}

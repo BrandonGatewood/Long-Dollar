@@ -1,6 +1,6 @@
 
 // Components
-import Toolbar from '../components/Toolbar';
+import Toolbar from '../components/bars/Toolbar';
 
 const Reports = () => {
     return (

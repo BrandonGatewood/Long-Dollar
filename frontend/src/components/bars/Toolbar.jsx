@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-// Buttons 
-import AddButton from "./buttons/AddColleagueButton";
+// modals 
+import AddColleagueModal from "../modals/AddColleagueModal";
 
 // Cards
-import ColleagueCard from "./cards/ColleagueCard";
-import ReportCard from "./cards/ReportCard";
+import ColleagueCard from "../cards/ColleagueCard";
+import ReportCard from "../cards/ReportCard";
 
 // Styles 
-import '../css/toolbar.css'
+import '../../css/components/toolbar.css'
 
 const Toolbar = ({option}) => {
     // Searching colleagues
@@ -22,11 +22,11 @@ const Toolbar = ({option}) => {
         <> 
             <div className="toolbar">
                 <input type="text" placeholder='Search colleague' onChange={handleQuery} value={query} />
-                {option === true && <AddButton />}
+                { option === true && <AddColleagueModal /> }
             </div>
-            <div>
-                {option === true && <ColleagueCard query={query} />}
-                {option === false && <ReportCard query={query} /> }
+            <div className="toolbarResults">
+                { option === true && <ColleagueCard query={query} /> }
+                { option === false && <ReportCard query={query} /> }
             </div>
         </>
     )

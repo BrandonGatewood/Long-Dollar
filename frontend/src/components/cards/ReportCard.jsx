@@ -2,16 +2,16 @@
 import ReportData from "../../data/mockDataHistory.json";
 
 // Styles 
-import "../../css/cards.css";
+import "../../css/components/cards.css";
 
 const ReportCard = ({query}) => {
 
-    const findWhoCashedOut = (dollar, date, name) => {
+    const handleLongDollar = (dollar) => {
         if(dollar) {
-            return(<p>{name} got the long dollar</p>)
+            return <p>Long dollar: Them</p>
         }
         else {
-            return(<p>You got the long dollar</p>)
+            return <p>Long dollar: You</p>
         }
     }
 
@@ -30,16 +30,15 @@ const ReportCard = ({query}) => {
                 }).map((report, index) => {
                     return (
                         <div key={index} className="card">
-                            <div className="reportHeader">
-                                <div className="title">
-                                    <h3>{report.name}</h3>
-                                </div>
+                            <div className="cardHeader">
+                                <h3 className="cardTitle">{report.name}</h3>
                                 <p>{report.date}</p>
                             </div>
-                            <div className="description">
-                                {findWhoCashedOut(report.dollar, report.date, report.name)}
+                            <div className="cardDescription report">
+                                {
+                                    handleLongDollar(report.dollar)
+                                }
                             </div>
-                            <div className="emptySpace"></div>
                         </div>
                     )
                 })

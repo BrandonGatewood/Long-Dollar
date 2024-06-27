@@ -2,19 +2,19 @@
 import ColleagueData from "../../data/mockDataColleagues.json";
 
 // Buttons
-import CashOutButton from "../buttons/CashOutButton";
-import InfoColleagueButton from "../buttons/InfoColleagueButton";
+import CashOutButton from "../modals/CashOutModal";
+import InfoColleagueButton from "../modals/InfoColleagueModal";
 
 // Styles
-import "../../css/cards.css";
+import "../../css/components/cards.css";
 
-const ColleagueCard = ({query}) => {
-    const handleWhoCashesOutNext = (longDollar) => {
+const ColleagueCard = ({ query }) => {
+    const handleLongDollar = (longDollar) => {
         if(longDollar) {
-            return(<p>They get the long dollar</p>)
+            return <p className="cardLongDollar">Long dollar: Them</p> 
         }
         else {
-            return(<p>You get the long dollar</p>)
+            return <p className="cardLongDollar">Long dollar: You</p>
         }
     }
     return (
@@ -32,15 +32,15 @@ const ColleagueCard = ({query}) => {
                 }).map((colleague, index) => {
                     return (
                         <div key={index} className="card">
-                            <div className="header">
-                                    <h3>{colleague.name}</h3>
-                                    <InfoColleagueButton colleague={colleague} /> 
+                            <div className="cardHeader">
+                                    <h3 className="cardTitle">{ colleague.name }</h3>
+                                    <InfoColleagueButton colleague={ colleague } /> 
                             </div>
-                            <div className="description">
-                                {handleWhoCashesOutNext(colleague.longDollar)}
-                            </div>
-                            <div className="cashOut">
-                                <CashOutButton colleague={colleague} /> 
+                            <div className="cardDescription">
+                                {
+                                    handleLongDollar(colleague.longDollar)
+                                }
+                                <CashOutButton colleague={ colleague } /> 
                             </div>
                         </div>
                     )

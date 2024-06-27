@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // Pages and Components
 import Home from './pages/Home'
 import Reports from './pages/Reports'
-import Navbar from './components/Navbar'
-import TopBar from './components/TopBar'
+import Navbar from './components/bars/Navbar'
+import TopBar from './components/bars/TopBar'
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-/* Button and Icons */
+/* Icons */
 .iconPrimary {
   fill: var(--primary);
   
@@ -8,41 +8,9 @@
   fill: var(--black);
 }
 
-.button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
 
-}
 
-.addButton {
-    height: 40px;
-    margin: auto;
-}
-
-.saveButton {
-    height: 40px;
-    width: 80px;
-    margin-right: 30px;
-    background-color: var(--primary);
-    color: var(--white);
-    font-size: medium;
-    border: var(--white) solid 2px;
-    border-radius: 5px;
-}
- 
-.closeButton {
-    fill: var(--primary);
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}  
-
-.colleagueCardButton {
-  height: 30px;
-}
-
+/* Buttons */
 .overlayButton {
   background-color: transparent;
   border: none;
@@ -50,29 +18,42 @@
   width: 100%;
 }
 
-.cashOutButton {
-    height: 40px;
-    width: 300px;
-    background-color: var(--primary);
-    border: none;
-    border-radius: 5px;
+.button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
-.editButton {
-  height: 40px;
-  border: none;
-  border-radius: 5px;
+.buttonPrimary {
   background-color: var(--primary);
+  color: var(--white);
 }
 
-.deleteButton {
-  height: 40px;
-  border: none;
-  border-radius: 5px;
+.buttonAlert {
   background-color: var(--red);
   color: var(--white);
 }
 
-.backButton {
-  padding-top: 10px;
+.modalFooterButton {
+  height: 40px;
+  width: 100%;
+}
+
+.buttonClaim {
+  height: 40px;
+  width: 50%;
+}
+
+.buttonRename {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.buttonRemove {
+  height: 40px;
+  width: 100%;
 }

@@ -1,12 +1,13 @@
 .navbar {
-  height: 80px;
+  height: 78px;
   background-color: var(--white);
-  position:absolute;
-  top:100vh;
-  transform:translateY(-100%);
+  border-top: 1px solid var(--grey-border);
+  position: fixed;
+  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
+  z-index: 99;
 }
 
 .navbarLink {
@@ -25,9 +26,11 @@
   color: var(--black);
 }
 
-.navbarLink.active {
-  background-color: var(--primary);
+.navBorderRight {
+  border-right: 0.5px solid var(--grey-border);
 }
+.navBorderLeft {
 
-
+  border-left: 0.5px solid var(--grey-border);
+}
 

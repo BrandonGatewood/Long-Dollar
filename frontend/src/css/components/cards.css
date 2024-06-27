@@ -1,0 +1,34 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--grey-border);
+  height: 100px;
+  padding: 10px 10px 9px 10px;
+  margin: 0 15px 15px 15px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 20px;
+} 
+
+.cardDescription {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardLongDollar {
+    width: 50%;
+} 
+
+.report {
+  justify-content: start;
+}
+
+

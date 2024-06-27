@@ -1,7 +1,10 @@
-import Signout from '../assets/icons/signOut.svg?react';
-import Logo from '../assets/images/LongDollarLogo.jpg';
+import Logo from '../../assets/images/LongDollarLogo.jpg';
+
+// Components
+import SignOutModal from '../modals/SignOutModal';
+
 // Styles
-import '../css/components/topBar.css';
+import '../../css/components/topBar.css';
 
 const TopBar = () => {
 
@@ -9,7 +12,7 @@ const TopBar = () => {
         <>
             <div className="topBarContainer">
                 <img className='logo' src={ Logo } alt="Long Dollar logo" />
-                <Signout />
+                <SignOutModal />
             </div>
         </>
     )
