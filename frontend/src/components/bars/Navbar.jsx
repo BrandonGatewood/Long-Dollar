@@ -8,24 +8,22 @@ import '../../css/components/navbar.css';
 import '../../css/button.css';
 
 const Navbar = () => {
-    const [ currPage, setCurrPage ] = useState(true);
-    const handleCurrPage = () => {
-        setCurrPage(!currPage);
-    }
+    const [ currPage, setCurrPage ] = useState(1);
+
     return(
         <>
             <nav className='navbar'>
-                <NavLink to='/' className="navbarLink navBorderRight" onClick={ handleCurrPage }>
+                <NavLink to='/' className="navbarLink navBorderRight" onClick={ () => setCurrPage(1) }>
                         <HomeIcon />
                         {
-                            currPage && 
+                            currPage === 1 && 
                             <p className='navbarTitle'>Home</p>
                         }
                 </NavLink>
-                <NavLink to='/Reports' className="navbarLink navBorderLeft" onClick={ handleCurrPage }>
+                <NavLink to='/Reports' className="navbarLink navBorderLeft" onClick={ () => setCurrPage(2) }>
                     <ReportsIcon />
                     {
-                        !currPage && 
+                        currPage === 2 && 
                         <p className='navbarTitle'>Reports</p>
                     }
                 </NavLink>
