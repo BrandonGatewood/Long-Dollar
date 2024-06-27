@@ -8,7 +8,7 @@ import AddColleagueIcon from "../../assets/icons/addColleagueIcon.svg?react";
 import '../../css/button.css';
 import '../../css/components/modal.css';
 
-const AddColleagueButton = () => {
+const AddColleagueModal = () => {
     const [isActive, setIsActive] = useState(false);
     const [ modalAnimation, setModalAnimation ] = useState("slideUp");
 
@@ -70,4 +70,4 @@ const AddColleagueButton = () => {
     )
 }
 
-export default AddColleagueButton;
+export default AddColleagueModal;

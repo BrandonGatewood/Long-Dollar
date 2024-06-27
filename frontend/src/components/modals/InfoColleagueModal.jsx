@@ -12,7 +12,7 @@ import CloseIcon from "../../assets/icons/closeIcon.svg?react";
 import '../../css/button.css'
 import '../../css/components/modal.css';
 
-const InfoColleagueButton = ({ colleague }) => {
+const InfoColleagueModal = ({ colleague }) => {
     const [ isActive, setIsActive ] = useState(false);
     const [ modalAnimation, setModalAnimation ] = useState("slideUp");
 
@@ -48,10 +48,8 @@ const InfoColleagueButton = ({ colleague }) => {
                     </div>
                 </div>
             }
-            {
-            }
         </>
     )
 }
 
-export default InfoColleagueButton;
+export default InfoColleagueModal;

@@ -2,8 +2,8 @@
 import ColleagueData from "../../data/mockDataColleagues.json";
 
 // Buttons
-import CashOutButton from "../modals/CashOutModal";
-import InfoColleagueButton from "../modals/InfoColleagueModal";
+import ClaimModal from "../modals/ClaimModal";
+import InfoColleagueModal from "../modals/InfoColleagueModal";
 
 // Styles
 import "../../css/components/cards.css";
@@ -34,13 +34,13 @@ const ColleagueCard = ({ query }) => {
                         <div key={index} className="card">
                             <div className="cardHeader">
                                     <h3 className="cardTitle">{ colleague.name }</h3>
-                                    <InfoColleagueButton colleague={ colleague } /> 
+                                    <InfoColleagueModal colleague={ colleague } /> 
                             </div>
                             <div className="cardDescription">
                                 {
                                     handleLongDollar(colleague.longDollar)
                                 }
-                                <CashOutButton colleague={ colleague } /> 
+                                <ClaimModal colleague={ colleague } /> 
                             </div>
                         </div>
                     )

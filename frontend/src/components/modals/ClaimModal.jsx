@@ -7,7 +7,7 @@ import CloseIcon from "../../assets/icons/closeIcon.svg?react";
 import '../../css/button.css';
 import '../../css/components/modal.css';
 
-const CashOutButton = ({colleague}) => {
+const ClaimModal = ({colleague}) => {
     const [ isActive, setIsActive ] = useState(false);
     const [ modalAnimation, setModalAnimation ] = useState("slideUp");
 
@@ -64,4 +64,4 @@ const CashOutButton = ({colleague}) => {
     )
 }
 
-export default CashOutButton;
+export default ClaimModal;
