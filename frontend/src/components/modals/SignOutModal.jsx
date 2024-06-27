@@ -38,10 +38,10 @@ const SignOutModal = () => {
                                 <CloseIcon />
                             </button>
                         </div>
-                        <div class="modalBody">
+                        <div className="modalBody">
                             <p className='modalText'>Are you sure you want to sign out?</p> 
                         </div>
-                        <div class="modalFooter">
+                        <div className="modalFooter">
                             <button type='button' className='button buttonAlert modalFooterButton'>
                                 Sign out 
                             </button> 

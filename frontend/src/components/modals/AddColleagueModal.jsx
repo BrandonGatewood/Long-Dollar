@@ -9,7 +9,7 @@ import '../../css/button.css';
 import '../../css/components/modal.css';
 
 const AddColleagueModal = () => {
-    const [isActive, setIsActive] = useState(false);
+    const [ isActive, setIsActive ] = useState(false);
     const [ modalAnimation, setModalAnimation ] = useState("slideUp");
 
     const handleModal = () => {
@@ -38,7 +38,7 @@ const AddColleagueModal = () => {
                                 <CloseIcon />
                             </button>
                         </div>
-                        <div class="modalBody">
+                        <div className="modalBody">
                             <div className="modalInput">
                                 <input type="text" placeholder='Enter name' />
                             </div>
@@ -58,7 +58,7 @@ const AddColleagueModal = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="modalFooter">
+                        <div className="modalFooter">
                             <button type='button' className='button buttonPrimary modalFooterButton'>
                                 Add 
                             </button> 
