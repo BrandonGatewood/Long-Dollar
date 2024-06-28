@@ -10,7 +10,7 @@ import ReportCard from "../cards/ReportCard";
 // Styles 
 import '../../css/components/toolbar.css'
 
-const Toolbar = ({option}) => {
+const Toolbar = ({ option }) => {
     // Searching colleagues
     const [query, setQuery] = useState("");
 

@@ -56,6 +56,7 @@ const deleteColleague = async (req, res) => {
 
     res.status(200).json(colleague);
 }
+
 // update a colleague
 const updateColleague = async (req, res) => {
     const { id } = req.params;
