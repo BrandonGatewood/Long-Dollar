@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useColleaguesContext } from '../../hooks/useColleaguesContext';
 
 // icons 
 import CloseIcon from "../../assets/icons/closeIcon.svg?react";
@@ -9,6 +10,8 @@ import '../../css/button.css';
 import '../../css/components/modal.css';
 
 const AddColleagueModal = () => {
+    const { colleagues, dispatch } = useColleaguesContext();
+
     const [ isActive, setIsActive ] = useState(false);
     const [ modalAnimation, setModalAnimation ] = useState("slideUp");
 
@@ -27,10 +30,8 @@ const AddColleagueModal = () => {
     }
 
     // backend 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-
 
         const colleague = { name, longDollar }
 
@@ -53,6 +54,7 @@ const AddColleagueModal = () => {
             setLongDollar(null);
             setError(null);
             handleModal();
+            dispatch({ type: 'CREATE_COLLEAGUE', payload: json })
         }
     }
 

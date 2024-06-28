@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
-// Mock Data
-import ColleagueData from "../../data/mockDataColleagues.json";
+import { useColleaguesContext } from "../../hooks/useColleaguesContext";
 
 // Buttons
 import ClaimModal from "../modals/ClaimModal";
@@ -11,7 +9,7 @@ import InfoColleagueModal from "../modals/InfoColleagueModal";
 import "../../css/components/cards.css";
 
 const ColleagueCard = ({ query }) => {
-    const[ colleaguesData, setColleaguesData ] = useState(null);
+    const { colleagues, dispatch } = useColleaguesContext();
 
     useEffect( () => {
         const fetchColleagues = async () => {
@@ -19,7 +17,7 @@ const ColleagueCard = ({ query }) => {
             const json = await response.json();
 
             if(response.ok) {
-                setColleaguesData(json);
+                dispatch({ type: 'SET_COLLEAGUES', payload: json })
             }
         }
 
@@ -40,7 +38,7 @@ const ColleagueCard = ({ query }) => {
         <>
             {
                 // filters colleagues when user types in search bar
-                colleaguesData && colleaguesData.filter(colleague => {
+                colleagues && colleagues.filter(colleague => {
                     if(query === "") {
                         return colleague;
                     }
