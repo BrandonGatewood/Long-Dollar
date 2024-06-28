@@ -12,12 +12,48 @@ const AddColleagueModal = () => {
     const [ isActive, setIsActive ] = useState(false);
     const [ modalAnimation, setModalAnimation ] = useState("slideUp");
 
+    const [ name, setName ] = useState("");
+    const [ longDollar, setLongDollar ] = useState(null);
+    const [ error, setError ] = useState(null);
+
     const handleModal = () => {
         setModalAnimation("slideDown");
         setTimeout( () => {
             setIsActive(false);
+            setName("");
+            setLongDollar(null);
             setModalAnimation("slideUp");
         }, 200);
+    }
+
+    // backend 
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+
+        const colleague = { name, longDollar }
+
+        const response = await fetch('/api/colleagues', {
+            method: 'POST' ,
+            body: JSON.stringify(colleague),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+
+        const json = await response.json();
+
+        if(!response.ok) {
+            setError(json.error);
+        }
+
+        if(response.ok) {
+            setName("");
+            setLongDollar(null);
+            setError(null);
+            handleModal();
+        }
     }
 
     return (
@@ -40,26 +76,26 @@ const AddColleagueModal = () => {
                         </div>
                         <div className="modalBody">
                             <div className="modalInput">
-                                <input type="text" placeholder='Enter name' />
+                                <input type="text" placeholder='Enter name' onChange={ (e) => setName(e.target.value) } value={ name }/>
                             </div>
                             <p className='modalText'>Who gets the next long dollar?</p>
                             <div className="row">
                                 <div className="col">
-                                    <input type="radio" name="longDollar" id="You" value="You" />
+                                    <input type="radio" name="longDollar" id="You" value="You" onChange={ (e) => setLongDollar(false) } />
                                     <label htmlFor="You">You</label>
                                 </div>
                                 <div className="col">
-                                    <input type="radio" name="longDollar" id="Them" value="Them" />
+                                    <input type="radio" name="longDollar" id="Them" value="Them" onChange={ (e) => setLongDollar(true) } />
                                     <label htmlFor="Them">Them</label>
                                 </div>
                                 <div className="col">
-                                    <input type="radio" name="longDollar" id="Randomize" value="Randomize" />
+                                    <input type="radio" name="longDollar" id="Randomize" value="Randomize" onChange={ (e) => setLongDollar(Math.random() < 0.5) } />
                                     <label htmlFor="Randomize">Random</label>
                                 </div>
                             </div>
                         </div>
                         <div className="modalFooter">
-                            <button type='button' className='button buttonPrimary modalFooterButton'>
+                            <button type='button' className='button buttonPrimary modalFooterButton' onClick={ handleSubmit }>
                                 Add 
                             </button> 
                         </div>
