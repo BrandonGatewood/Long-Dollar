@@ -1,36 +1,62 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import HomeIcon from '../../assets/icons/homeIcon.svg?react';
-import ReportsIcon from '../../assets/icons/reportsIcon.svg?react';
+
+// Assets
+import Logo from '../../assets/images/LongDollarLogo.jpg';
+import Hamburger from '../../assets/icons/hamburger.svg?react';
+import Close from '../../assets/icons/close.svg?react';
 
 // Styles
-import '../../css/components/navbar.css';
+import '../../css/components/bars/navbar.css';
 import '../../css/button.css';
 
 const Navbar = () => {
-    const [ currPage, setCurrPage ] = useState(1);
+   const [ showNavbar, setShowNavbar ] = useState(false);
+
+    const handleShowNavbar = () => {
+        setShowNavbar(!showNavbar);
+    }
 
     return(
         <>
-            <nav className='navbar'>
-                <NavLink to='/' className="navbarLink navBorderRight" onClick={ () => setCurrPage(1) }>
-                        <HomeIcon />
-                        {
-                            currPage === 1 && 
-                            <p className='navbarTitle'>Home</p>
-                        }
-                </NavLink>
-                <NavLink to='/Reports' className="navbarLink navBorderLeft" onClick={ () => setCurrPage(2) }>
-                    <ReportsIcon />
-                    {
-                        currPage === 2 && 
-                        <p className='navbarTitle'>Reports</p>
-                    }
-                </NavLink>
-            </nav> 
-
+        <nav className="navbar">
+            <div className="container">
+                <div className="logo">
+                    <NavLink to='/'>
+                        <img src={ Logo }  alt="Mimo's Logo" className="logo" />
+                    </NavLink>
+                </div>
+                <div className="menuIcon" onClick={ handleShowNavbar }>
+                    { !showNavbar && <Hamburger /> }
+                    { showNavbar && <Close /> }
+                </div>
+                {
+                    showNavbar && 
+                        <button type='button' className='overlayButton' onClick={ handleShowNavbar }></button>
+                }
+                <div className={`nav-elements  ${ showNavbar && 'active'}`}>
+                    <ul>
+                        <li>
+                            <NavLink to='/Home'>
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/Transactions'>
+                                Transactions 
+                            </NavLink>
+                        </li>
+                        <li className='signout'>
+                            <button className='button buttonPrimary buttonSignout'>
+                                Signout 
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         </>
-    )
+    ); 
 }
 
 export default Navbar;

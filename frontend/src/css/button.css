@@ -23,13 +23,17 @@
   background-color: transparent;
   padding: 0;
   cursor: pointer;
-  font-size: 16px;
   border-radius: 5px;
 }
 
 .buttonPrimary {
   background-color: var(--primary);
   color: var(--white);
+}
+
+.buttonPrimary:focus, .buttonPrimary:hover {
+  background-color: var(--white);
+  color: var(--primary);
 }
 
 .buttonAlert {
@@ -56,4 +60,11 @@
 .buttonRemove {
   height: 40px;
   width: 100%;
+}
+
+.buttonSignout {
+  font-size: 24px;
+  height: 40px;
+  width: 100%;
+  padding: 0 30px;
 }
