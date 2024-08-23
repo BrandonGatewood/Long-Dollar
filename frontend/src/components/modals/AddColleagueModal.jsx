@@ -3,7 +3,7 @@ import { useColleaguesContext } from '../../hooks/useColleaguesContext';
 
 // icons 
 import CloseIcon from "../../assets/icons/closeIcon.svg?react";
-import AddColleagueIcon from "../../assets/icons/addColleagueIcon.svg?react";
+import AddColleagueIcon from "../../assets/icons/plus.svg?react";
 
 // styles
 import '../../css/button.css';

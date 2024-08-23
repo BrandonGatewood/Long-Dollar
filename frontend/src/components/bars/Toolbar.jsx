@@ -8,7 +8,7 @@ import ColleagueCard from "../cards/ColleagueCard";
 import ReportCard from "../cards/ReportCard";
 
 // Styles 
-import '../../css/components/toolbar.css'
+import '../../css/components/bars/toolbar.css'
 
 const Toolbar = ({ option }) => {
     // Searching colleagues
@@ -20,6 +20,8 @@ const Toolbar = ({ option }) => {
 
     return(
         <> 
+        <div className="toolBar">
+
             <div className="toolbar">
                 <input type="text" placeholder='Search colleague' onChange={handleQuery} value={query} />
                 { option === true && <AddColleagueModal /> }
@@ -28,6 +30,7 @@ const Toolbar = ({ option }) => {
                 { option === true && <ColleagueCard query={query} /> }
                 { option === false && <ReportCard query={query} /> }
             </div>
+        </div>
         </>
     )
 }
