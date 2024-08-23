@@ -1,11 +1,12 @@
 /* toolbar styles */
-.toolBar {
+.toolbar {
   display: flex;
   justify-content: center;
   background: rgba(255, 255, 255, 0.08);
 
 }
-.toolbar {
+
+.toolbarContent {
   width: 100%;
   max-width: 1600px;
   height: 60px;
