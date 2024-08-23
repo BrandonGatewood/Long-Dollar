@@ -37,7 +37,7 @@ const Navbar = () => {
                 <div className={`nav-elements  ${ showNavbar && 'active'}`}>
                     <ul>
                         <li>
-                            <NavLink to='/Home'>
+                            <NavLink to='/'>
                                 Home
                             </NavLink>
                         </li>
