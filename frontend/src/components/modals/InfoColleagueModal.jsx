@@ -27,7 +27,7 @@ const InfoColleagueModal = ({ colleague }) => {
     return(
         <>
             <button type="button" className="button" onClick={ () => setIsActive(true) }>
-                <MenuIcon />
+                <MenuIcon fill='white'/>
             </button>
 
             {

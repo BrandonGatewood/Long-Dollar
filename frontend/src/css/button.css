@@ -8,6 +8,9 @@
   fill: var(--black);
 }
 
+.menuIcon {
+  fill: var(--white);
+}
 
 
 /* Buttons */
@@ -47,8 +50,10 @@
 }
 
 .buttonClaim {
-  height: 40px;
+  height: 35px;
   width: 50%;
+  border-radius: 50px;
+  font-size: 16px;
 }
 
 .buttonRename {

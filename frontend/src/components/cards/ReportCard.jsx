@@ -8,10 +8,10 @@ const ReportCard = ({query}) => {
 
     const handleLongDollar = (dollar) => {
         if(dollar) {
-            return <p>Long dollar: Them</p>
+            return <p className="text">Long dollar: Them</p>
         }
         else {
-            return <p>Long dollar: You</p>
+            return <p className="text">Long dollar: You</p>
         }
     }
 
@@ -32,7 +32,7 @@ const ReportCard = ({query}) => {
                         <div key={index} className="card">
                             <div className="cardHeader">
                                 <h3 className="cardTitle">{report.name}</h3>
-                                <p>{report.date}</p>
+                                <p className="text">{report.date}</p>
                             </div>
                             <div className="cardDescription report">
                                 {
