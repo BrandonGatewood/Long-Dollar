@@ -43,12 +43,12 @@ const ClaimModal = ({colleague}) => {
                         <div className='modalHeader'>
                             <h2>Claim Long Dollar</h2>
                             <button type='button' className='button' onClick={ handleModal } >
-                               <CloseIcon />
+                               <CloseIcon className='iconPrimary' />
                             </button>
                         </div>
                         <div className="modalBody">
                             <p className='modalDate'>
-                                <strong>Date:</strong> <em>11/12/23</em>
+                                <strong className="date">Date:</strong> <em>11/12/23</em>
                             </p>
                             { handleDescription() } 
                         </div>

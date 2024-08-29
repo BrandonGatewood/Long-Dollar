@@ -105,6 +105,10 @@
 .modalDate {
     padding-bottom: 30px;
 }
+.date {
+    color: var(--primary);
+
+}
 
 
 /*
