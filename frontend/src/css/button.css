@@ -8,6 +8,10 @@
   fill: var(--black);
 }
 
+.iconWhite {
+  fill: var(--white);
+}
+
 .menuIcon {
   fill: var(--white);
 }

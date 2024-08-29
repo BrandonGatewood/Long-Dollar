@@ -73,7 +73,7 @@ const AddColleagueModal = () => {
                         <div className='modalHeader'>
                             <h2>Add New Colleague</h2>
                             <button type='button' className='button' onClick={ handleModal } >
-                                <CloseIcon />
+                                <CloseIcon className='iconPrimary' />
                             </button>
                         </div>
                         <div className="modalBody">
