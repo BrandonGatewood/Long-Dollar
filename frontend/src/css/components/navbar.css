@@ -14,14 +14,13 @@
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 20px 0px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .menuIcon {
@@ -33,6 +32,7 @@
 .nav-elements ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
 }
 

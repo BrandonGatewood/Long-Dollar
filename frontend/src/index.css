@@ -1,10 +1,13 @@
 :root {
   --background: #121212;
+  --white: #fff;
+  --green: #85bb65;
+  --red: #ff0000;
+
+
   --primary: #85bb65;
   --primary-light: #91c274;
-  --white: #fff;
   --black: #000;
-  --red: #cc0000;
   --grey: #dedede;
   --grey-border: #cccccc;
   --subText: #666;

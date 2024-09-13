@@ -8,7 +8,7 @@ import ColleagueCard from "../cards/ColleagueCard";
 import ReportCard from "../cards/ReportCard";
 
 // Styles 
-import '../../css/components/bars/toolbar.css'
+import '../../css/components/toolbar.css'
 
 const Toolbar = ({ option }) => {
     // Searching colleagues

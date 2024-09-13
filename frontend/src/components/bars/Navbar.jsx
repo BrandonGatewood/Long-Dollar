@@ -7,7 +7,7 @@ import Hamburger from '../../assets/icons/hamburger.svg?react';
 import Close from '../../assets/icons/close.svg?react';
 
 // Styles
-import '../../css/components/bars/navbar.css';
+import '../../css/components/navbar.css';
 import '../../css/button.css';
 
 const Navbar = () => {
