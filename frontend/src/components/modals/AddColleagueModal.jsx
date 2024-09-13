@@ -61,7 +61,7 @@ const AddColleagueModal = () => {
     return (
         <>
 
-            <button type="button" className="button" onClick={ () => setIsActive(true) }>
+            <button type="button" className="button buttonAdd" onClick={ () => setIsActive(true) }>
                 <AddColleagueIcon className='iconWhite'/>
             </button> 
 

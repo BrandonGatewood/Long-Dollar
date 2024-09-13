@@ -53,6 +53,11 @@
   width: 100%;
 }
 
+.buttonAdd {
+  width: 24px;
+  height: 24px;
+}
+
 .buttonClaim {
   height: 35px;
   width: 50%;
