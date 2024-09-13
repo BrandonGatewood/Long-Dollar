@@ -23,7 +23,7 @@ const Toolbar = ({ option }) => {
         <div className="toolbar">
 
             <div className="toolbarContent">
-                <input type="text" placeholder='Search colleague' onChange={handleQuery} value={query} />
+                <input type="text" placeholder='Search Colleague' onChange={handleQuery} value={query} />
                 { option === true && <AddColleagueModal /> }
             </div>
             <div className="toolbarResults">

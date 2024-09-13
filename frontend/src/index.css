@@ -43,7 +43,6 @@ input[type=text] {
   padding: 10px;
   margin: auto;
   border-radius: 50px;
-  background-color: var(--grey);
   border: none;
 
   -webkit-box-sizing: border-box;
