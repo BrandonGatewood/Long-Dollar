@@ -4,10 +4,6 @@
   
 } 
 
-.iconSecondary {
-  fill: var(--black);
-}
-
 .iconWhite {
   fill: var(--white);
 }
@@ -43,6 +39,7 @@
   color: var(--primary);
 }
 
+
 .buttonAlert {
   background-color: var(--red);
   color: var(--white);
@@ -56,6 +53,10 @@
 .buttonAdd {
   width: 24px;
   height: 24px;
+}
+
+.buttonAdd:focus, .buttonAdd:hover {
+  background-color: var(--green);
 }
 
 .buttonClaim {
