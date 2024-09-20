@@ -5,7 +5,7 @@ import AddColleagueModal from "../modals/AddColleagueModal";
 
 // Cards
 import ColleagueCard from "../cards/ColleagueCard";
-import ReportCard from "../cards/ReportCard";
+import TransactionCard from "../cards/TransactionCard";
 
 // Styles 
 import '../../css/components/toolbar.css'
@@ -28,7 +28,7 @@ const Toolbar = ({ option }) => {
             </div>
             <div className="toolbarResults">
                 { option === true && <ColleagueCard query={query} /> }
-                { option === false && <ReportCard query={query} /> }
+                { option === false && <TransactionCard query={query} /> }
             </div>
         </div>
         </>

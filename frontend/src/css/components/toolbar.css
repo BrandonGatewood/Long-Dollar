@@ -1,5 +1,6 @@
 /* toolbar styles */
 .toolbar {
+  height: 80px;
   display: flex;
   justify-content: center;
   background: rgba(255,255,255, 0.08);
@@ -16,7 +17,7 @@
 
 .toolbarResults {
   position: fixed; 
-  top: 140px;
+  top: 160px;
   bottom: 0px;
   width: 100%;
   overflow-y: scroll;

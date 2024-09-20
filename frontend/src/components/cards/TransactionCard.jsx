@@ -4,7 +4,7 @@ import ReportData from "../../data/mockDataHistory.json";
 // Styles 
 import "../../css/components/cards.css";
 
-const ReportCard = ({query}) => {
+const TransactionCard = ({query}) => {
 
     const handleLongDollar = (dollar) => {
         if(dollar) {
@@ -34,7 +34,7 @@ const ReportCard = ({query}) => {
                                 <h3 className="cardTitle">{report.name}</h3>
                                 <p className="text">{report.date}</p>
                             </div>
-                            <div className="cardDescription report">
+                            <div className="report">
                                 {
                                     handleLongDollar(report.dollar)
                                 }
@@ -47,4 +47,4 @@ const ReportCard = ({query}) => {
     )
 }
 
-export default ReportCard;
+export default TransactionCard;
