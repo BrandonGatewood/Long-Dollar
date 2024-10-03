@@ -24,6 +24,15 @@ const ColleagueCard = ({ query }) => {
         fetchColleagues();
     }, []);
 
+     const handleLongDollar = (dollar) => {
+        if(dollar) {
+            return <p className="text">Long dollar: Them</p>
+        }
+        else {
+            return <p className="text">Long dollar: You</p>
+        }
+    }
+
     return (
         <>
             {
@@ -43,8 +52,15 @@ const ColleagueCard = ({ query }) => {
                                     <h3 className="cardTitle">{ colleague.name }</h3>
                                     <InfoColleagueModal colleague={ colleague } /> 
                             </div>
-                            <div className="cardDescription">
-                                <ClaimModal colleague={ colleague } /> 
+                            <div className="cardBody">
+                                <div className="cardBodyDescription">
+                                    {
+                                        handleLongDollar(colleague)
+                                    }
+                                </div>
+                                <div className="cardBodyButton">
+                                    <ClaimModal colleague={ colleague } /> 
+                                </div>
                             </div>
                         </div>
                     )

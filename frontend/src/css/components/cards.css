@@ -32,3 +32,16 @@
 }
 
 
+/*
+  Colleague Card
+*/
+.cardBody {
+  padding-left: 8px;
+}
+
+.cardBodyDescription{
+  padding-top: 8px;
+}  
+.cardBodyButton {
+  padding-top: 16px;
+}
