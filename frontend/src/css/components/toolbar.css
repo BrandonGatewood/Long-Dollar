@@ -1,24 +1,23 @@
 /* toolbar styles */
 .toolbar {
+  height: 80px;
   display: flex;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-
+  background: rgba(255,255,255, 0.08);
 }
 
 .toolbarContent {
   width: 100%;
-  max-width: 1600px;
-  height: 60px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 0px 20px 0px 20px;
+  padding: 20px; 
 }
 
 .toolbarResults {
   position: fixed; 
-  top: 140px;
+  top: 160px;
   bottom: 0px;
   width: 100%;
   overflow-y: scroll;
