@@ -47,7 +47,7 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li className='signout'>
-                            <button className='button buttonPrimary buttonSignout'>
+                            <button className='button buttonSecondary buttonSignout'>
                                 Signout 
                             </button>
                         </li>

@@ -30,6 +30,11 @@
 }
 
 .buttonPrimary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.buttonSecondary {
   background-color: var(--white);
   color: var(--primary);
 }
@@ -61,7 +66,7 @@
 .buttonClaim {
   height: 35px;
   width: 50%;
-  border-radius: 50px;
+  border-radius: 5px;
   font-size: 16px;
 }
 
