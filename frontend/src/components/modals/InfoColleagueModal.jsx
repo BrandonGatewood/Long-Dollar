@@ -38,10 +38,10 @@ const InfoColleagueModal = ({ colleague }) => {
                         <div className='modalHeader'>
                             <h2>{colleague.name}</h2>
                             <button type='button' className='button' onClick={ handleModal } >
-                                <CloseIcon />
+                                <CloseIcon className='iconPrimary' />
                             </button>
                         </div>
-                        <div className="modalBody">
+                        <div className="modalBody info">
                             <RenameColleagueModal colleague={ colleague } />
                             <RemoveColleagueModal colleague={ colleague } />
                         </div>

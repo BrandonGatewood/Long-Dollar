@@ -62,13 +62,14 @@
 
 .buttonRename {
   height: 40px;
-  width: 100%;
-  margin-bottom: 30px;
+  width: 40%;
+  border-radius: 50px;
 }
 
 .buttonRemove {
   height: 40px;
-  width: 100%;
+  width: 40%;
+  border-radius: 50px;
 }
 
 .buttonSignout {
